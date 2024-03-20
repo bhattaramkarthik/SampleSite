@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import RouteElement from './components/RouteElement';
+import { useState } from 'react';
 
 function App() {
+  const [aboutActiveLink, setAboutActiveLink] = useState(false);
+  const [contactActiveLink, setContactActiveLink] = useState(false);
+  const [serviceActiveLink, setServiceActiveLink] = useState(false);
+  const [galleryActiveLink, setGalleryActiveLink] = useState(false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header aboutActiveLink={aboutActiveLink}
+        contactActiveLink={contactActiveLink}
+        serviceActiveLink={serviceActiveLink} 
+        galleryActiveLink={galleryActiveLink} 
+        setAboutActiveLink={setAboutActiveLink}
+        setContactActiveLink={setContactActiveLink}
+        setServiceActiveLink={setServiceActiveLink} 
+        setGalleryActiveLink={setGalleryActiveLink}
+      />
+      <RouteElement
+        setAboutActiveLink={setAboutActiveLink}
+        setContactActiveLink={setContactActiveLink}
+        setServiceActiveLink={setServiceActiveLink} 
+        setGalleryActiveLink={setGalleryActiveLink}
+      />
+      <Footer />
+    </>
   );
 }
 

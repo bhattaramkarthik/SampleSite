@@ -1,0 +1,109 @@
+
+.mainSection{
+    font-family: sans-serif;
+}
+
+.mainParaSection{
+    text-align:justify;
+}
+
+.benefitsSection{
+    text-align:justify;
+}
+
+@media only screen and (min-width: 768px){
+   
+    .mainSection{
+        margin-top: 20px;
+        margin-left: 80px;
+    }
+
+    .contentSection{
+        display:flex;
+    }
+
+    .contentSection.benifitSection{
+        margin-top:40px;
+    }
+
+    .mainParaSection{
+        margin-left: 50px;
+        width:500px;
+    }
+
+    .benefitsSection{
+        width:500px;
+        margin-top:30px;
+    }
+
+    .benifitImageSection{
+        margin-left: 50px;
+    }
+
+    .benifitImageMin{
+        display:none;
+        width:500px;
+        height:440px;
+    }
+
+    .mainImageClass{
+        width:500px;
+        height:440px;
+    }
+
+    .benifitImageClass{
+        width:500px;
+        height:440px;
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    .benifitImageMin{
+        display: inline;
+        width:390px;
+        height:440px;
+    }
+
+    .mainImageClass{
+        width:390px;
+        height:440px;
+    }
+
+    .benifitImageClass{
+        width:390px;
+        height:440px;
+    }
+
+    .benifitImageSection{
+        display:none;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width: 768px){
+
+    .benifitImageMin{
+        display: inline;
+        width:480px;
+        height:440px;
+    }
+
+    .mainImageClass{
+        width:480px;
+        height:440px;
+    }
+
+    .benifitImageClass{
+        width:480px;
+        height:440px;
+    }
+
+    .benifitImageSection{
+        display: none;
+    }
+
+    .mainSection{
+        margin-top: 20px;
+        margin-left:15px;
+    }
+}

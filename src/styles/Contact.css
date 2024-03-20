@@ -1,0 +1,38 @@
+
+.contactSection{
+    font-family: sans-serif;
+}
+
+p{
+    padding-left: 30px;
+}
+
+.contactHeading{
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.emptyPara{
+    margin-left:30px;
+    width:220px;
+    border-bottom: 2px solid white;
+}
+
+
+@media only screen and (min-width: 800px){
+    .contactSection{
+        display: flex;
+    }
+
+    .contactClass{
+        width:500px;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .imageSection{
+        margin-top:100px;
+    }
+
+}

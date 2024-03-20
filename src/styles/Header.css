@@ -1,0 +1,99 @@
+button:hover{
+    cursor: pointer;
+}
+
+button{
+    border: none;
+}
+
+.darkNavlinkClass:hover{
+    border-bottom: 2px solid #dadada;
+}
+
+.darkNavlinkClass{
+  background-color:#1f2023;
+  color:#dadada;
+  border-bottom: none;
+}
+
+.lightNavlinkClass{
+    background-color:white;
+    color:#1f2023;
+    border-bottom: none;
+}
+
+.lightNavlinkClass:hover{
+    border-bottom: 2px solid #1f2023;
+}
+
+.headerSection{
+    margin-top:0px;
+}
+
+.activeClass{
+    border-bottom:2px solid black;
+    background-color:white;
+}
+
+.darkActiveClass{
+    border-bottom:2px solid white;
+    background-color:#1f2023;
+    color:#dadada;
+}
+
+.modeClass{
+    margin-left:5px;
+}
+
+.darkClass{
+    background-color: #1f2023;
+    color: #dadada;
+}
+
+
+.modeClass:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px){
+    .headerSection{
+        height: 50px;
+        display: flex;
+    }
+
+    .headerTitle{
+        padding: 15px;
+        font-family: sans-serif;
+        font-size:15px;
+    }
+
+    .headerMenu{
+        position:absolute;
+        right:10px;
+        padding:15px;
+    }
+
+    button{
+        margin-right:10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px){
+    .headerSection{
+        height: 65px;
+    }
+
+    .headerTitle{
+       text-align:center;
+       font-family: sans-serif;
+       font-weight: bold;
+       font-size:25px;
+    }
+
+    .headerMenu{
+        padding-top:12px;
+        text-align:center;
+    }
+}

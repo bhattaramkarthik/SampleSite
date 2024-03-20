@@ -1,0 +1,52 @@
+.servicePage {
+    font-family: sans-serif;
+}
+
+.serviceSection {
+    text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+    .serviceSection {
+        margin-left: 20px;
+        margin-top: 50px;
+        width: 500px;
+    }
+
+    .serviceImageSection {
+        margin-left: 30px;
+    }
+
+    .serviceContainer {
+        display: flex;
+    }
+
+    .servicesOfferContainer {
+        margin-top: 30px;
+    }
+
+    .servicesText {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .services1 {
+        width: 500px;
+    }
+
+    .ul1 {
+        margin-left: 220px;
+    }
+
+    .servicesClass {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width:480px){
+      
+    .serviceImageClass{
+        width:390px;
+        height:440px;
+    }
+}
