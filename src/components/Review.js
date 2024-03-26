@@ -33,6 +33,13 @@ function Review() {
         }
     ];
 
+    function handleCommentSection(e) {
+        var val = e.target.value;
+        if (val.length <= 100) {
+            setMessage(val);
+        }
+    }
+
     useEffect(() => {
         let updatedData = [];
         for (let i = 0; i < reviewData.length; i++) {
@@ -115,22 +122,75 @@ function Review() {
             <div>
                 <h3 className='reviewHeading'>Leave Your Comment</h3>
                 <div>
-                    <p className='reviewHeading'>Name : <input type='text' placeholder='Enter your name' value={name} onChange={(e) => { setName(e.target.value) }}></input></p>
-                    <p className='reviewHeading'>Email : <input type='text' placeholder='Enter your email' value={mail} onChange={(e) => { setMail(e.target.value) }}></input></p>
-                    <p className='reviewHeading'>Comments : <input type='text' placeholder='Enter your comments' maxLength={50} value={message} onChange={(e) => { setMessage(e.target.value) }}></input></p>
-                    <p className='reviewHeading'>Rating :
-                        <Star className='unhideStar' color='#ffe234' id='rating1' onClick={() => handleUnfill(1)} />
-                        <StarFill className='hideStar' id='ratingf1' color='#ffe234' onClick={() => handleFill(1)} />
-                        <Star className='unhideStar' id='rating2' color='#ffe234' onClick={() => handleUnfill(2)} />
-                        <StarFill className='hideStar' id='ratingf2' color='#ffe234' onClick={() => handleFill(2)} />
-                        <Star className='unhideStar' id='rating3' color='#ffe234' onClick={() => handleUnfill(3)} />
-                        <StarFill className='hideStar' id='ratingf3' color='#ffe234' onClick={() => handleFill(3)} />
-                        <Star className='unhideStar' id='rating4' color='#ffe234' onClick={() => handleUnfill(4)} />
-                        <StarFill className='hideStar' id='ratingf4' color='#ffe234' onClick={() => handleFill(4)} />
-                        <Star className='unhideStar' id='rating5' color='#ffe234' onClick={() => handleUnfill(5)} />
-                        <StarFill className='hideStar' id='ratingf5' color='#ffe234' onClick={() => handleFill(5)} />
-                    </p>
-                    <p className='reviewHeading'><button className='submitButtonClass' onClick={() => { handleSubmit() }}>Submit</button></p>
+                    <table className='reviewTable'>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Name
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input type='text' placeholder='Enter your name' value={name} onChange={(e) => { setName(e.target.value) }}>
+                                    </input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td>
+
+                                    <input type='text' placeholder='Enter your email' value={mail} onChange={(e) => { setMail(e.target.value) }}></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Comments
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td>
+                                    <textarea className='commentsClass' placeholder='Maximum 100 characters' value={message} rows={4} cols={50} onChange={(e) => { handleCommentSection(e) }}></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Rating
+                                </td>
+                                <td>
+                                    :
+                                </td>
+                                <td>
+                                    <Star className='unhideStar' color='#ffe234' id='rating1' onClick={() => handleUnfill(1)} />
+                                    <StarFill className='hideStar' id='ratingf1' color='#ffe234' onClick={() => handleFill(1)} />
+                                    <Star className='unhideStar' id='rating2' color='#ffe234' onClick={() => handleUnfill(2)} />
+                                    <StarFill className='hideStar' id='ratingf2' color='#ffe234' onClick={() => handleFill(2)} />
+                                    <Star className='unhideStar' id='rating3' color='#ffe234' onClick={() => handleUnfill(3)} />
+                                    <StarFill className='hideStar' id='ratingf3' color='#ffe234' onClick={() => handleFill(3)} />
+                                    <Star className='unhideStar' id='rating4' color='#ffe234' onClick={() => handleUnfill(4)} />
+                                    <StarFill className='hideStar' id='ratingf4' color='#ffe234' onClick={() => handleFill(4)} />
+                                    <Star className='unhideStar' id='rating5' color='#ffe234' onClick={() => handleUnfill(5)} />
+                                    <StarFill className='hideStar' id='ratingf5' color='#ffe234' onClick={() => handleFill(5)} />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button className='submitButtonClass' onClick={() => { handleSubmit() }}>Submit</button>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
